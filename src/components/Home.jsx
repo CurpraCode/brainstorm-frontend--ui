@@ -1,8 +1,9 @@
-import React from "react";
+
+
 import Hero from "./Hero";
 import Capsule from "./Capsule";
 
-const Home = () => {
+export const Home = () => {
   return (
     <div>
       <Hero />
@@ -11,4 +12,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+

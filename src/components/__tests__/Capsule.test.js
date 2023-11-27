@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable no-undef */
 import { render, screen } from "@testing-library/react";
 import axios from "axios";
 import {jest} from "@jest/globals";

@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable no-undef */
+
 import { render, fireEvent, screen } from "@testing-library/react";
 import SearchFilter from "../SearchFilter";
 

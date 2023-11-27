@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 function SearchFilter({ onSearch }) {
@@ -8,6 +9,7 @@ function SearchFilter({ onSearch }) {
 
   useEffect(() => {
     onSearch({ serial, status, type });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [serial, status, type]);
 
   const handleSerialChange = (e) => {
