@@ -10,7 +10,7 @@ function Capsule() {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
-  const [selectedCapsule, setSelectedCapsule] = useState(null); // Track the selected capsule
+  const [selectedCapsule, setSelectedCapsule] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -132,14 +132,17 @@ function Capsule() {
                     Details: {capsule.details}
                   </p>
                   <div className="flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-0 sm:items-center mb-3">
-                    Status: <p
+                    Status:{" "}
+                    <p
                       className={`xl:text-sm rounded-lg capitalize px-2 py-1 ${getStatusStyle(
                         capsule.status,
                       )}`}
                     >
                       {capsule.status}
                     </p>
-                    <p className="text-gray-800 capitalize text-sm ">Type: {capsule.type}</p>
+                    <p className="text-gray-800 capitalize text-sm ">
+                      Type: {capsule.type}
+                    </p>
                   </div>
                   <p className="text-gray-800 text-sm  capitalize mb-4">
                     Original Launch:{" "}
@@ -158,7 +161,7 @@ function Capsule() {
         </div>
         {isModalOpen && selectedCapsule && (
           <div
-            className="fixed[=] inset-0 z-50 flex justify-center items-center bg-gray-700 bg-opacity-75 modal-overlay transition duration-1000 ease-in-out"
+            className="fixed inset-0 z-50 flex justify-center items-center bg-gray-700 bg-opacity-75 modal-overlay transition duration-1000 ease-in-out"
             role="dialog"
           >
             <div className="w-5/6 md:w-2/5 bg-white p-6 rounded-2xl">
@@ -189,17 +192,25 @@ function Capsule() {
                   </ul>
                 </div>
                 <div className="flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-0 sm:items-center mb-3">
-                  Status: <p className="text-white capitalize px-2 py-1 bg-green-600">
+                  Status:{" "}
+                  <p className="text-white capitalize px-2 py-1 bg-green-600">
                     {selectedCapsule.status}
                   </p>
-                  <p className="text-gray-800 capitalize">Type: {selectedCapsule.type}</p>
+                  <p className="text-gray-800 capitalize">
+                    Type: {selectedCapsule.type}
+                  </p>
                 </div>
                 <div className="flex justify-between items-center mb-3">
-                  <p className="text-gray-800 capitalize">Landings: {selectedCapsule.landings}</p>
-                  <p className="text-gray-800 capitalize">Reuse Count: {selectedCapsule.reuse_count}</p>
+                  <p className="text-gray-800 capitalize">
+                    Landings: {selectedCapsule.landings}
+                  </p>
+                  <p className="text-gray-800 capitalize">
+                    Reuse Count: {selectedCapsule.reuse_count}
+                  </p>
                 </div>
                 <p className="text-gray-800 capitalize mb-3">
-                  Original Launch: {moment(selectedCapsule.original_launch).format("MMM Do YYYY")}
+                  Original Launch:{" "}
+                  {moment(selectedCapsule.original_launch).format("MMM Do YYYY")}
                 </p>
               </div>
               <button

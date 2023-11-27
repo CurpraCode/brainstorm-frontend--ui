@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start">
           <img
             className="w-full md:w-1/2 rounded-lg mb-4 md:mb-0 md:mr-4"
-            src="https://example.com/spacex-image.jpg"
+            src="https://www.spacex.com/vehicles/starship/assets/images/Starbase_Desktop.jpg"
             alt="SpaceX Banner"
           />
           <div className="md:w-1/2">
