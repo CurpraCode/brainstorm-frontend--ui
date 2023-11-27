@@ -174,22 +174,15 @@ function Capsule() {
               <div className="mb-3">
                 <div className="mb-3">
                   <h3 className="text-lg font-semibold mb-2">Missions:</h3>
-                  <ul className="list-disc">
-                    <li>
-                      <p>
-                        <span className="font-semibold">CRS-6</span> - Flight 22
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        <span className="font-semibold">CRS-13</span> - Flight 51
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        <span className="font-semibold">CRS-18</span> - Flight 82
-                      </p>
-                    </li>
+                  <ul className="list-none">
+                  {selectedCapsule.missions.map((mission, index) => (
+                <li key={index}>
+                  <p>
+                    <span className="font-semibold">{mission.name}</span> -
+                    Flight {mission.flight}
+                  </p>
+                </li>
+              ))}
                   </ul>
                 </div>
                 <div className="flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-0 sm:items-center mb-3">
